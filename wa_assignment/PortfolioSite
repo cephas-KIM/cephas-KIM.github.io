@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Cephas Kim</h1>
+        <h3>Hello world. This is my portfolio page!</h3>
+        <h2>ABOUT</h2>
+        <p>I am a student at the University of Colorado Boulder.<br>
+            I am also a person with a lot of hobbies.<br>
+            Thank you for visiting my page!
+        </p>
+        <h2>INTERESTS</h2>
+        <ul>
+            <li>Running</li>
+            <li>Climbing</li>
+            <li>Lifting</li>
+            <li>Skiing</li>
+            <li>FPV Drones</li>
+        </ul>
+        <h2>GOALS</h2>
+        <ul>
+            <li>Hike the PCT</li>
+            <li>Run a 100 mile ultramarathon</li>
+            <li>Climb Denali</li>
+            <li>Find a job I dont hate</li>
+            <li>Serve the community</li>
+        </ul>
+        <h2>CONTACT INFO</h2>
+        <ul>
+            <li>714-322-3935</li>
+            <li>ceki4800@colorado.edu</li>
+        </ul>
+    </body>
+</html>

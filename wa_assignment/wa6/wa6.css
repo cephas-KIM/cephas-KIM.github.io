@@ -84,3 +84,4 @@
 
 .quick-link h3 { margin: 0 0 .25rem; }
 .quick-link p  { margin: 0; }
+.quick-links__grid.is-list { grid-template-columns: 1fr; }

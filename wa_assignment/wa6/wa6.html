@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VMA</title>
-    <link rel="stylesheet" href="wa5.css"/>
+    <link rel="stylesheet" href="wa6.css"/>
   </head>
 <body>
   <nav class="main-nav">
@@ -31,6 +31,13 @@
   <main id="home">
   <section class="quick-links" aria-labelledby="quick-links-title">
     <h2 id="quick-links-title">Quick Links</h2>
+    <div class="controls-row">
+      <input id="resource-search" type="search" placeholder="Search resources…">
+      <div class="view-toggle" role="group" aria-label="View">
+        <button type="button" data-view="grid">Grid</button>
+        <button type="button" data-view="list">List</button>
+      </div>
+    </div>
     <div class="quick-links__grid">
       <a class="quick-link" href="#resources">
         <h3>Resources</h3>

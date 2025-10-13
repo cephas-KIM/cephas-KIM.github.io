@@ -1,0 +1,103 @@
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Dark mode (toggle adds .dark to body) */
+body.dark {
+  background: #111;
+  color: #f5f5f5;
+}
+
+/* Nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f4f4f4;
+}
+body.dark .main-nav { background: #1b1b1b; }
+
+.nav-menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu a { color: inherit; text-decoration: none; }
+.nav-toggle {
+  display: none;
+  padding: 8px 10px;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-block; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    left: 0; right: 0; top: 56px;
+    background: #f4f4f4;
+    padding: 12px 16px;
+    border-top: 2px solid #0aa;
+  }
+  body.dark .nav-menu { background: #1b1b1b; border-top-color: #2dd4bf; }
+  .nav-menu.open { display: block; }
+}
+
+/* Layout */
+main { padding: 16px; }
+section { margin: 24px 0; }
+
+/* Controls */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0 16px;
+}
+.controls label { font-size: 14px; }
+.controls input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: inherit;
+  color: inherit;
+}
+.buttons { display: flex; gap: 8px; }
+.buttons button {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  background: inherit;
+  color: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.cards.list { grid-template-columns: 1fr; }
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background: inherit;
+}
+.card h3 { margin: 0 0 6px; }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light {
+            background-color: antiquewhite;
+        }
+
+        .dark {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="theme" type="button">Click Me!</button>
+
+    <script>
+        /*
+        - What data you're storing:
+          - Key: 'userTheme'
+          - Value: 'light' or 'dark' (string)
+
+        - Why this data is necessary:
+          - Keeps the user's theme choice across visits so they don't have 
+            to switch every time; improves comfort and accessibility.
+
+        - How users can control this data:
+          - In browser settings: clear site data/storage for this site.
+        */
+        let btn = document.querySelector('#theme').addEventListener('click',theme);
+
+        function theme(){
+            // console.log("theme works");
+            setTheme("light");
+        }
+        // Save user's theme choice
+        function setTheme(theme) {
+            let inTheme = theme;
+            if (inTheme == 'dark') {
+                theme == 'light';
+            }
+            else {
+                theme ='dark';
+            }
+            localStorage.setItem('userTheme', theme);
+            document.body.className = theme;
+        }
+        
+        // Load saved theme on page load
+        window.addEventListener('load', function() {
+            const savedTheme = localStorage.getItem('userTheme') || 'light';
+            document.body.className = savedTheme;
+        });
+    </script>
+</body>
+</html>

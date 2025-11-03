@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weather Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="WA11.css" rel="stylesheet">
+</head>
+<body>
+  <header class="container">
+    <h1>Cephas' Cool Weather Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Settings</h2>
+
+      <fieldset class="field">
+        <legend>Location Selection</legend>
+        <label><input type="radio" name="mode" value="precise" checked> Precise (use my location)</label>
+        <label><input type="radio" name="mode" value="city"> City (choose)</label>
+        <label><input type="radio" name="mode" value="manual"> Manual (type a city)</label>
+      </fieldset>
+
+      <div class="row" id="cityRow" hidden>
+        <label for="citySelect" class="label">City</label>
+        <select id="citySelect">
+          <option value="Boulder,US">Boulder, US</option>
+          <option value="Denver,US">Denver, US</option>
+          <option value="Seattle,US">Seattle, US</option>
+          <option value="New York,US">New York, US</option>
+          <option value="London,GB">London, GB</option>
+          <option value="Seoul,KR">Seoul, KR</option>
+        </select>
+      </div>
+
+      <div class="row" id="manualRow" hidden>
+        <label for="manualCity" class="label">City</label>
+        <input id="manualCity" type="text" placeholder="e.g., Boulder, US">
+      </div>
+
+      <button id="goBtn" class="btn">Get Weather</button>
+      <p id="status" aria-live="polite" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Weather</h2>
+      <div id="card" class="weather" hidden>
+        <div class="topline">
+          <h3 id="wCity"></h3>
+          <p id="wDesc" class="muted"></p>
+        </div>
+        <div class="temp" id="wTemp"></div>
+        <div class="grid">
+          <div><strong>Feels like</strong><br><span id="wFeels"></span></div>
+          <div><strong>Humidity</strong><br><span id="wHum"></span></div>
+          <div><strong>Wind</strong><br><span id="wWind"></span></div>
+        </div>
+        <small id="asOf" class="muted"></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footnote">
+    <small>WA11</small>
+  </footer>
+
+  <script src="WA11.js"></script>
+</body>
+</html>

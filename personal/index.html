@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jigsaw Valentine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <section id="langOverlay" class="overlay" aria-modal="true" role="dialog" aria-hidden="false">
+        <div class="pixel-card modal-card">
+          <h1 id="langTitle">Select language</h1>
+          <div class="lang-actions">
+            <button id="langEnBtn" class="pixel-btn" type="button">English</button>
+            <button id="langPtBtn" class="pixel-btn" type="button">Português (Brasil)</button>
+          </div>
+        </div>
+      </section>
+
+      <header class="hud pixel-card">
+        <h2 id="instructionsText">Solve the puzzle!</h2>
+        <button id="restartBtn" class="pixel-btn" type="button">Restart</button>
+      </header>
+
+      <section id="puzzleScene" class="scene">
+        <div id="puzzleArea" class="puzzle-area">
+          <div id="board" class="board" aria-label="Puzzle board">
+            <div id="boardPieces" class="board-pieces"></div>
+          </div>
+          <div id="tray" class="tray" aria-label="Puzzle piece tray"></div>
+          <div id="pieceLayer" class="piece-layer"></div>
+        </div>
+      </section>
+
+      <section id="revealScene" class="scene hidden" aria-hidden="true">
+        <div id="revealWrap" class="reveal-wrap pixel-card">
+          <div class="question-panel pixel-card">
+            <img id="revealImage" src="neptune.png" alt="Neptune reveal" draggable="false" />
+            <p id="questionText">will you be Cephas' valentine?</p>
+            <div id="choiceZone" class="choice-zone">
+              <button id="yesBtn" class="pixel-btn big" type="button">YES</button>
+              <div id="noSlot" class="no-slot" aria-hidden="true"></div>
+              <button
+                id="noBtn"
+                class="pixel-btn big no-btn"
+                type="button"
+                disabled
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                NO
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="finalDialog" class="overlay hidden" aria-modal="true" role="dialog" aria-hidden="true">
+        <div class="pixel-card modal-card">
+          <p id="finalMsgText">please text Cephas with your schedule for Saturday</p>
+          <button id="finalOkBtn" class="pixel-btn" type="button">OK</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
